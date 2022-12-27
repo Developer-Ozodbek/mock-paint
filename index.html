@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Paint</title>
+    <!--? LINKS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ebce50574d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <!--* DRAWING PART -->
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+        <!--* TOOLS BOARD -->
+        <section class="tools-board">
+            <!--? FIRST ROW  -->
+            <div class="row">
+                <label class="title">Shakllar</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <i class="fa-regular fa-square"></i><span>To'rtburchak</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <i class="fa-regular fa-circle"></i><span>Doira</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <i class="fa-regular fa-solid fa-triangle"></i><span>Uchburchak</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Rangni to'ldirish</label>
+                    </li>
+                </ul>
+            </div>
+            <!--? Second ROW -->
+            <div class="row">
+                <label class="title">Variantlar</label>
+                <ul class="options">
+                    <li class="option tool active" id="brush">
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <i class="fa-solid fa-eraser"></i>
+                        <span>O'chirgich</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="30" value="5">
+                    </li>
+                </ul>
+            </div>
+            <!--? Third ROW -->
+            <div class="row colors">
+                <label class="title">Ranglar</label>
+                <ul class="options">
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" class="form-control from-control-color" id="color-picker" value="#44bcff">
+                    </li>
+                </ul>
+            </div>
+            <!--? Fourth ROW -->
+            <div class="row buttons">
+                <button class="clear-canvas btn btn-outline-danger mb-2">O'chirish</button>
+                <button class="save-img btn btn-primary">Saqlash</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
